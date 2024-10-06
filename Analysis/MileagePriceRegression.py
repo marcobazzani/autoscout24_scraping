@@ -89,6 +89,14 @@ class MileagePriceRegression:
         plt.title('Price vs. Mileage with Polynomial Regression')
         plt.xlabel('Mileage (rounded to thousands)')
         plt.ylabel('Price')
+        
+        # Adding more ticks to the x-axis and y-axis
+        x_ticks = np.linspace(self.mileage_values.min(), self.mileage_values.max(), 20)  # 10 evenly spaced ticks
+        y_ticks = np.linspace(self.average_price_values.min(), self.average_price_values.max(), 20)  # 10 evenly spaced ticks
+        
+        plt.xticks(x_ticks)
+        plt.yticks(y_ticks)
+
         plt.legend()
         plt.grid(True)
         plt.show()
